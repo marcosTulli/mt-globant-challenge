@@ -22,7 +22,20 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components": ["src/components/index.tsx"],
+      "@components/*": ["src/components/*"],
+      "@services": ["src/services/index.ts"],
+      "@services/*": ["src/services/*"],
+      "@models": ["src/models/index.ts"],
+      "@models/*": ["src/models/*"],
+      "@config": ["src/config/index.ts"],
+      "@config/*": ["src/config/*"]
+    }
   },
   "include": ["src"]
 }
