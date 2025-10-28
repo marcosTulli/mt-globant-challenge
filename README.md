@@ -25,3 +25,15 @@ Share a StackBlitz/CodeSandbox link or a public GitHub repo with brief notes (wh
 
 1. You may use Google/AI, but be ready to explain your code and choices.
 2. API Docs if you need it: https://fakestoreapi.com/docs
+
+
+### Additional Notes
+
+- I decided to focus on fetching the data first and take care of the UI changes once I've made sure the API was well integrated with the App. 
+
+- To optimize development time, I  chose to implement Tanstack React-Query to handle API fetching, using query function helpers. 
+
+- I implemmented a simple debounced keystroke client-side filter for the products. 
+
+- I created a Product domain model class that encapsulates product data with private fields and getter methods, providing a clear, immutable interface for accessing product properties.
+This approach improves type safety, enforces data consistency, and separates raw API data (ProductDTO) from the app’s domain logic.
