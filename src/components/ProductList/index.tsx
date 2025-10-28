@@ -1,15 +1,24 @@
 import { Link } from 'react-router';
-import { useGetProducts } from './hooks/useGetProducts';
 import '../../styles/ProductList.css';
+import useFilteredProducts from './hooks/useFilteredProducts';
 
 export function ProductList() {
-  const { products } = useGetProducts();
+  const { filteredProducts: products, handleChange, isLoading } = useFilteredProducts();
 
   return (
     <div>
-      <input type="text" role="searchbox" placeholder="Search here" />
-      <section className="collection">
-        {products?.map((product) => (
+      {/* TODO: Add clear filter cta */}
+      <input
+        type="text"
+        role="searchbox"
+        placeholder="Search here"
+        onChange={handleChange}
+      /> 
+      {isLoading ? (
+        <p>Loading products...</p> // TODO: Add skeleton
+      ) : (
+        <section className="collection">
+          {products?.map((product) => (
           <div key={product.id()} className="card">
             <img
               src={product.image()}
@@ -24,7 +33,8 @@ export function ProductList() {
             </p>
           </div>
         ))}
-      </section>
+        </section>
+      )}
     </div>
   );
 }
