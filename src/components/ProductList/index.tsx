@@ -1,11 +1,10 @@
 import { Link } from 'react-router';
-import '../styles/ProductList.css';
+import { useGetProducts } from './hooks/useGetProducts';
+
 
 export function ProductList() {
-  /**
-   * Render a list of products using https://fakestoreapi.com/products
-   */
-
+  const {products} = useGetProducts()
+  console.log(products)
   return (
     <div>
       <input type="text" role="searchbox" placeholder="Search here" />
