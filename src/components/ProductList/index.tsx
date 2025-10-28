@@ -20,7 +20,7 @@ export function ProductList() {
             <p className="price">${product.price()}</p>
             <p>{product.category()}</p>
             <p>
-              <Link to={`/products/${product.id}`}>More details</Link>
+              <Link to={`/products/${product.id()}`}>More details</Link>
             </p>
           </div>
         ))}
