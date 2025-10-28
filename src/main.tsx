@@ -4,7 +4,7 @@ import './index.css';
 import App from './App.tsx';
 import { ProductDetail } from './components/ProductDetail.tsx';
 import { ProductList } from '@components/ProductList/index.tsx';
-import { QueryProvider } from '@components/providers/QueryProvider';
+import { QueryProvider } from '@components/providers';
 
 createRoot(document.getElementById('root')!).render(
   <QueryProvider>
